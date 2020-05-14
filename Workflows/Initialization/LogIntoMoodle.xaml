@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>844,2529</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1098,2529</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LogIntoMoodle_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -159,7 +159,7 @@
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2832e27a-a2a0-494b-94b1-f01dc0b9a423" InformativeScreenshot="0b9adc72ad4291e9c4a56a8c5eebf0f4" Selector="&lt;html title='SWITCH edu-ID Login' /&gt;&lt;webctrl id='username' tag='INPUT' /&gt;" TimeoutMS="[Int32.Parse(in_Config(&quot;TimeoutMedium&quot;).ToString)]" WaitForReady="COMPLETE" />
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Secure Text Into Input Box 'password'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[password]">
+                        <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Secure Text Into Input Box 'password'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[password]">
                           <ui:TypeSecureText.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93e2fc49-1714-4e6d-894c-e1825646663f" InformativeScreenshot="9081c5e7a838885aee394ae507ee8437" Selector="&lt;html title='SWITCH edu-ID Login' /&gt;&lt;webctrl id='password' tag='INPUT' /&gt;" TimeoutMS="[Int32.Parse(in_Config(&quot;TimeoutMedium&quot;).ToString)]">
                               <ui:Target.WaitForReady>
