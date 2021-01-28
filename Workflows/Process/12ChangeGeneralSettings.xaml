@@ -35,7 +35,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -59,6 +59,8 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="03 Change Time Settings-Sequence" sap:VirtualizedContainerService.HintSize="494,2960" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -98,7 +100,7 @@
                 <OutArgument x:TypeArguments="s:DateTime">[examDateAsDateTime]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="s:DateTime">[Convert.ToDateTime("05/15/2020 00:00:00")]</InArgument>
+                <InArgument x:TypeArguments="s:DateTime">[Convert.ToDateTime(in_Config("courseOpeningDate").ToString)]</InArgument>
               </Assign.Value>
             </Assign>
             <Sequence DisplayName="Change Course Opening Settings-Sequence" sap:VirtualizedContainerService.HintSize="376,1022" sap2010:WorkflowViewState.IdRef="Sequence_7">
@@ -189,7 +191,7 @@
                   <OutArgument x:TypeArguments="s:DateTime">[examDateAsDateTime]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="s:DateTime">[Convert.ToDateTime("06/30/2020 00:00:00")]</InArgument>
+                  <InArgument x:TypeArguments="s:DateTime">[Convert.ToDateTime(in_Config("courseClosingDate").ToString)]</InArgument>
                 </Assign.Value>
               </Assign>
               <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'INPUT  id_enddate_enabled'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Check_2">

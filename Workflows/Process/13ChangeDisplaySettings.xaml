@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,1396</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1125,1296</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_01OpenMoodleCourseSettings_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -99,7 +99,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Get language (Assign)" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign DisplayName="Get language (Assign)" sap:VirtualizedContainerService.HintSize="493,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[language]</OutArgument>
                 </Assign.To>
@@ -107,7 +107,7 @@
                   <InArgument x:TypeArguments="x:String">[in_TransactionItem.Item("language").ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[language.Equals(&quot;EN&quot;)]" DisplayName="If Language is English" sap:VirtualizedContainerService.HintSize="484,312" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[language.Equals(&quot;EN&quot;)]" DisplayName="If Language is English" sap:VirtualizedContainerService.HintSize="493,312" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
                   <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="" DisplayName="Set Text 'SELECT  id_lang'" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="SetValue_5" Text="en">
                     <ui:SetValue.Target>
@@ -135,7 +135,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="To select the &quot;No&quot; (Nein)-Text, the value must be 0" DisplayName="Set Text 'SELECT  id_showgrades'" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="SetValue_4" Text="0">
+              <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="To select the &quot;Yes&quot; (Ja)-Text, the value must be 1" DisplayName="Set Text 'SELECT  id_showgrades'" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="SetValue_4" Text="1">
                 <ui:SetValue.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="16ec8706-c743-4876-89c0-902e1426118d" InformativeScreenshot="ffa51a91d03324459cecb36bf13dba6b" Selector="&lt;webctrl id='id_showgrades' tag='SELECT' /&gt;">
                     <ui:Target.TimeoutMS>

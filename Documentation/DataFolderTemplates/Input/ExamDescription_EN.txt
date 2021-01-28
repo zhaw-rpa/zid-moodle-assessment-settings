@@ -1,0 +1,19 @@
+<h4>Exam information</h4>
+<ul>
+    <li>Exam date / time: {0:dd.MM.yyyy} / {1:t} - {2:t}</li>
+    <li>Exam duration: {3} Minutes</li>
+    <li>Resources allowed: Open book, Open internet</li>
+    <li>Calculator: free calculator</li>
+    <li>Dictionary: Yes</li>
+</ul>
+<h4>General information</h4>
+<ul>
+    <li>For remarks pertaining to specific questions, please refer to information included in the task.</li>
+    <li>Invigilators are not allowed to respond to any questions related to the content of the exam.</li>
+    <li>If you wish to hand in your exam early, you may do so anytime before the official end of the examination.</li>
+</ul>
+<h4>Moodle-specific information</h4>
+<ul>
+    <li>The questions are displayed one by one (one question on one page).</li>
+    <li>A return to the preceding question is not possible.</li>
+</ul>

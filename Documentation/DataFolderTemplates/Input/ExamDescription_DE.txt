@@ -1,0 +1,19 @@
+<h4>Prüfungsinformationen</h4>
+<ul>
+    <li>Prüfungsdatum / -zeit: {0:dd.MM.yyyy} / {1:t} - {2:t}</li>
+    <li>Prüfungsdauer: {3} Minuten</li>
+    <li>Hilfsmittel: Open Book, Open Internet</li>
+    <li>Taschenrechner: Freier TR</li>
+    <li>Diktionär: Erlaubt</li>
+</ul>
+<h4>Allgemeine Hinweise</h4>
+<ul>
+    <li>Besondere Hinweise finden Sie in der jeweiligen Prüfungsaufgabe.</li>
+    <li>Die Prüfungsaufsicht beantwortet keine fachlichen Fragen zu den Prüfungsaufgaben.</li>
+    <li>Vorzeitige Prüfungsabgaben sind jederzeit vor Prüfungsende erlaubt.</li>
+</ul>
+<h4>Hinweise zum Moodle Test</h4>
+<ul>
+    <li>Die Fragen werden einzeln angezeigt (eine Frage pro Seite).</li>
+    <li>Eine Rückkehr zur vorhergehenden Frage ist nicht möglich.</li>
+</ul>

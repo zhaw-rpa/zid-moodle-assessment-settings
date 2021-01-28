@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>534,1156</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,1387</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_01OpenMoodleCourseSettings_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -61,7 +61,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="02 Change Name and Description" sap:VirtualizedContainerService.HintSize="544,1091" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="02 Change Name and Description" sap:VirtualizedContainerService.HintSize="544,1222" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="moodleUrl" />
     </Sequence.Variables>
@@ -78,13 +78,13 @@
         <InArgument x:TypeArguments="x:String">[in_Config("moodle_mainpage").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  Dashboard'" sap:VirtualizedContainerService.HintSize="502,899" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="3192b105f0bbd2f0a88ed3a2187fb478" Selector="&lt;html url='{{moodleUrl}}*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  Dashboard'" sap:VirtualizedContainerService.HintSize="502,1030" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="3192b105f0bbd2f0a88ed3a2187fb478" Selector="&lt;html url='{{moodleUrl}}*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,753" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,884" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="language" />
             </Sequence.Variables>
@@ -110,17 +110,27 @@
                 </ui:Target>
               </ui:SetValue.Target>
             </ui:SetValue>
-            <Sequence DisplayName="Change Description-Sequence" sap:VirtualizedContainerService.HintSize="426,387" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence sap2010:Annotation.AnnotationText="ATTENTION: Needs Atto Text Editor enabled in Moodle" DisplayName="Change Description-Sequence" sap:VirtualizedContainerService.HintSize="426,518" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="examDescriptionTemplate" />
+                <Variable x:TypeArguments="x:String" Name="examDescription" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:ReadTextFile Content="[examDescriptionTemplate]" DisplayName="Read ExamDescriptionTemplate-Text File" FileName="[in_Config(&quot;ExamDescriptionTemplatePath&quot;).ToString + language + &quot;.txt&quot;]" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-              <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="This inserts the html code in the background, so the change will only be visible after saving the test settings" DisplayName="Set Text of 'Description textarea'" sap:VirtualizedContainerService.HintSize="384,176" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="[String.Format(examDescriptionTemplate, in_TransactionItem.Item(&quot;exam_date&quot;), in_TransactionItem.Item(&quot;exam_time_begin&quot;), in_TransactionItem.Item(&quot;exam_time_end&quot;), in_TransactionItem.Item(&quot;exam_duration&quot;).ToString)]">
+              <Assign sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[examDescription]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[String.Format(examDescriptionTemplate, in_TransactionItem.Item("exam_date"), in_TransactionItem.Item("exam_time_begin"), in_TransactionItem.Item("exam_time_end"), in_TransactionItem.Item("exam_duration").ToString)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="This inserts the html code in the background, so the change will only be visible after saving the test settings" DisplayName="Set Text of 'Description textarea'" sap:VirtualizedContainerService.HintSize="384,176" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="[examDescription]">
                 <ui:SetValue.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66a91cf2-4456-4bfc-9f5d-369316d846a6" InformativeScreenshot="34586858f935c2d146924777913e924d" Selector="&lt;webctrl id='id_introeditor' tag='TEXTAREA' /&gt;">
                     <ui:Target.TimeoutMS>
