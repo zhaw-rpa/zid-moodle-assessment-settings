@@ -5,9 +5,9 @@
   "dependencies": {
     "Microsoft.Activities.Extensions": "[2.0.6.9]",
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
-    "UiPath.Excel.Activities": "[2.11.4]",
-    "UiPath.System.Activities": "[21.10.3]",
-    "UiPath.UIAutomation.Activities": "[21.10.4]"
+    "UiPath.Excel.Activities": "[2.16.0]",
+    "UiPath.System.Activities": "[22.10.1]",
+    "UiPath.UIAutomation.Activities": "[22.10.1]"
   },
   "webServices": [],
   "entitiesStores": [],
